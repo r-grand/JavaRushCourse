@@ -1,0 +1,52 @@
+package com.javarush.task.task21.task2102;
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+/* 
+Сравниваем модификаторы
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        int classModifiers = Solution.class.getModifiers();
+        System.out.println(isModifierSet(classModifiers, Modifier.PUBLIC));   //true
+        System.out.println(isModifierSet(classModifiers, Modifier.STATIC));   //false
+        
+        int methodModifiers = getMainMethod().getModifiers();
+        System.out.println(isModifierSet(methodModifiers, Modifier.STATIC));      //true
+    }
+
+    public static boolean isModifierSet(int allModifiers, int specificModifier) {
+//        String all = Integer.toBinaryString(allModifiers);
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(all).reverse();
+//        while (sb.length() < 11) {
+//            sb.append("0");
+//        }
+//        sb.reverse();
+//        String spec = Integer.toBinaryString(specificModifier);
+//        StringBuilder sp = new StringBuilder();
+//        sp.append(spec).reverse();
+//        while (sp.length() < 11) {
+//            sp.append("0");
+//        }
+//        sp.reverse();
+//        for (int i = 0; i < sb.length(); i++) {
+//            if (sb.toString().toCharArray()[i] == '1' && sp.toString().toCharArray()[i] == '1') {
+//                return true;
+//            }
+//        }
+//        return false;
+        return (allModifiers & specificModifier) > 0;
+    }
+
+    private static Method getMainMethod() {
+        Method[] methods = Solution.class.getDeclaredMethods();
+        for (Method method : methods) {
+            if (method.getName().equalsIgnoreCase("main")) return method;
+        }
+
+        return null;
+    }
+}
