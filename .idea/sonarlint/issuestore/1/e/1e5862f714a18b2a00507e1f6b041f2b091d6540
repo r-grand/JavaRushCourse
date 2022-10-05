@@ -1,17 +1,0 @@
-
-K
-java:S1191"5Use classes from the Java API instead of Sun classes.(ÓÒÒÃ
-d
-java:S1128"NRemove this unused import 'com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput'.(ÓÒÒÃ
-q
-java:S1450"VRemove the "numberA" field and declare it as a local variable in the relevant methods.(ˆµµƒúÿÿÿÿ
-j
-java:S1450"VRemove the "numberB" field and declare it as a local variable in the relevant methods.(­’@
-S	java:S106"9Replace this use of System.out or System.err by a logger.(â×êğúÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(åæ¥ûÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(â×êğúÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(åæ¥ûÿÿÿÿ
-Z	java:S106&"9Replace this use of System.out or System.err by a logger.(ñ»¢‘úÿÿÿÿ8¹°•¤/
-U	java:S106'"9Replace this use of System.out or System.err by a logger.(€¿¾®8ş ±•¤/
-I
-java:S1481"'Remove this unused "sb" local variable.(„ÅÅ±üÿÿÿÿ8¬Ê±•¤/
